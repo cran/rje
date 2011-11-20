@@ -20,7 +20,7 @@ ddirichlet(x, alpha, log = FALSE, tol = 1e-10)
   \item{n}{number of random variables to be generated.}
   \item{alpha}{vector of Dirichlet hyper parameter.}
   \item{x}{vector (or matrix) of points in sample space.}
-  \item{log}{logical; if TRUE, log density is returned.}
+  \item{log}{logical; if TRUE, natural logarithm of density is returned.}
   \item{tol}{tolerance of vectors not summing to 1 and negative values.}
 }
 \details{

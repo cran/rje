@@ -8,12 +8,13 @@
 Set Operations
 }
 \description{
-Series of functions to mimic existing operations extended to lists of vectors.
+Series of functions extending existing vector operations to lists of vectors.
 }
 \usage{
 setmatch(x, y, nomatch = NA_integer_)
 subsetmatch(x, y, nomatch = NA_integer_)
 setsetdiff(x, y)
+setsetequal(x, y)
 }
 \arguments{
   \item{x}{
@@ -33,8 +34,8 @@ contained in the list \code{y}, and if so returns position of the first such
 vector in \code{y}.  The ordering of the elements of the vector is irrelevant, 
 as they are considered to be sets.
 
-\code{subsetmatch} is similar to \code{setmatch}, except elements of \code{x}
-are searched to see if they are subsets of elements of \code{y}.
+\code{subsetmatch} is similar to \code{setmatch}, except vectors in \code{x}
+are searched to see if they are subsets of vectors in \code{y}.
 
 \code{setsetdiff} is a setwise version of \code{setdiff}, and \code{setsetequal}
 a setwise version of \code{setequal}.

@@ -5,8 +5,7 @@
 Print Percentage of Activity Completed to stdout
 }
 \description{
-Used to print percentages of loop or similar process which has been completed %
-to the user.
+Prints percentage of loop or similar process which has been completed to the standard output.
 }
 \usage{
 printPercentage(i, n, dp = 0, first = 1, last = n, prev = i - 1)
@@ -37,7 +36,7 @@ Robin Evans
 }
 
 \section{Warning}{
-This will fail to work nicely if other test is printed to the standard output %
+This will fail to work nicely if other information is printed to the standard output %
 during the process.
 }
 

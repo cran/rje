@@ -6,15 +6,15 @@
 Miscellaneous useful functions
 }
 \description{
-A series of useful functions, some of which are available in other
-  forms in other packages, but many of which have been extended in some way.
+A series of useful functions, some available in different
+  forms in other packages, but which have been extended or modified in some way considered useful to the author.
 }
 \details{
 \tabular{ll}{
 Package: \tab rje\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2011-07-14\cr
+Version: \tab 1.1\cr
+Date: \tab 2011-11-20\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
@@ -22,6 +22,9 @@ LazyLoad: \tab yes\cr
 \author{
 Robin Evans
 
-Maintainer: Robin Evans <rje42@uw.edu>
+Mathias Drton
+
+Maintainer: Robin Evans <rje42@cam.ac.uk>
 }
 \keyword{package}
+\keyword{array}
