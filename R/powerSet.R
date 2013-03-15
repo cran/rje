@@ -10,4 +10,3 @@ function(x, rev=FALSE) {
 
   out
 }
-

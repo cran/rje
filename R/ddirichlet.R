@@ -21,4 +21,3 @@ function(x, alpha, log = FALSE, tol=1e-10) {
 
   return(out)
 }
-

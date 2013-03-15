@@ -13,8 +13,8 @@ A series of useful functions, some available in different
 \tabular{ll}{
 Package: \tab rje\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2011-11-20\cr
+Version: \tab 1.3\cr
+Date: \tab 2012-03-15\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
@@ -28,3 +28,4 @@ Maintainer: Robin Evans <rje42@cam.ac.uk>
 }
 \keyword{package}
 \keyword{array}
+\keyword{arith}

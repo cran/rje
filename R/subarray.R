@@ -6,4 +6,3 @@ function(x, value, drop=TRUE){
   args <- c(quote(x), value, list(drop=drop))
   return(do.call("[", args))
 }
-

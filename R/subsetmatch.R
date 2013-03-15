@@ -16,4 +16,3 @@ function(x, y, nomatch = NA_integer_) {
 
   out
 }
-

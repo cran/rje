@@ -4,4 +4,3 @@ function(x, y) {
 
   all(c(setmatch(x, y, 0L) > 0L, setmatch(y, x, 0L) > 0L))
 }
-

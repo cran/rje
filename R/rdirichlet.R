@@ -11,4 +11,3 @@ function(n, alpha) {
   
   out
 }
-

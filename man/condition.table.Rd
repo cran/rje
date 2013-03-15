@@ -1,5 +1,6 @@
 \name{condition.table}
 \alias{condition.table}
+\alias{condition.table2}
 \title{
 Find conditional probability table
 }
@@ -8,6 +9,7 @@ Given a numeric array, calculates margins of some dimensions conditional on part
 }
 \usage{
 condition.table(x, variables, condition = NULL, condition.value = NULL)
+condition.table2(x, variables, condition)
 }
 \arguments{
   \item{x}{
@@ -20,16 +22,26 @@ An integer vector containing the margins of \code{x} interest.
 An integer vector containing the dimensions of \code{x} to condition on.
 }
   \item{condition.value}{
-An integer vector or list of the same length as \code{condition}, containing the values to condition with.
+An integer vector or list of the same length as \code{condition},
+containing the values to condition with.  If \code{NULL}, then the full
+conditional distribution is returned.
 }
 }
 \details{
-Calculates the marginal distribution over the dimensions in \code{variables} for each specified value of the dimensions in \code{condition}.  Single or multiple values of each dimension in \code{condition} may be specified in \code{condition.value}; in the case of multiple values, \code{condition.value} must be a list.
+\code{condition.table} calculates the marginal distribution over the dimensions in \code{variables} for each specified value of the dimensions in \code{condition}.  Single or multiple values of each dimension in \code{condition} may be specified in \code{condition.value}; in the case of multiple values, \code{condition.value} must be a list.
 
-The sum over the dimensions in \code{variables} is normalized to 1 for each value of \code{condition}.
+The sum over the dimensions in \code{variables} is normalized to 1 for
+each value of \code{condition}.
+
+\code{condition.table2} is just a wrapper which returns the conditional
+distribution as an array of the same dimensions and ordering as the
+original \code{x}.
 }
 \value{
-An array whose first \code{length(variables)} corresponds to the dimensions in \code{variables}, and the remainder (if any) to dimensions in \code{condition} with a corresponding entry in \code{condition.value} of length > 1.
+\code{condition.table} returns an array whose first \code{length(variables)} corresponds to the dimensions in \code{variables}, and the remainder (if any) to dimensions in \code{condition} with a corresponding entry in \code{condition.value} of length > 1.
+
+\code{condition.table2} always returns an array of the same dimensions
+as \code{x}, with the variables in the same order.
 }
 \author{
 Mathias Drton, Robin Evans
@@ -46,6 +58,13 @@ x = x/sum(x) # probability distribution on 4 binary variables x1, x2, x3, x4.
 condition.table(x, c(2,3), c(1,4), c(1,2))
 # x2, x3 given x1 = 1,2 and x4 = 2.
 condition.table(x, c(2,3), c(1,4), list(1:2,2))
+
+# complete conditional of x2, x3 given x1, x4
+condition.table(x, c(2,3), c(1,4))
+
+# condition.table2 leaves dimensions unchanged
+tmp = condition.table2(x, c(2,3), c(1,4))
+aperm(tmp, c(2,3,1,4))
 }
 
 \keyword{array}

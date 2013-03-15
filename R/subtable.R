@@ -11,4 +11,3 @@ function(x, variables, value, drop=TRUE){
 
   return(out)
 }
-

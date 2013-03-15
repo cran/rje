@@ -20,4 +20,3 @@ function(x, which, n) {
 
   return(Recall(x.new, which.new, n))
 }
-
