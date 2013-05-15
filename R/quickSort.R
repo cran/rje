@@ -17,7 +17,7 @@ function(x, f=greaterThan, random=TRUE) {
   comp = numeric(n)
   comp[mid] = 2
 
-  for (i in seq(n)[-mid]) {
+  for (i in seq_len(n)[-mid]) {
     if (lst) comp[i] = f(x[[i]], x[[mid]])
     else comp[i] = f(x[i], x[mid])
   }

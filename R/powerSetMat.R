@@ -1,4 +1,4 @@
 powerSetMat <-
 function(n) {
-  combinations(rep(2, n))
+  combinations(rep.int(2, n))
 }

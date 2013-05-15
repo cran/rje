@@ -7,7 +7,7 @@ Complex repetitions
 Recreate patters for collapsed arrays
 }
 \usage{
-patternRepeat(x, which, n)
+patternRepeat(x, which, n, careful = TRUE)
 }
 \arguments{
   \item{x}{
@@ -19,6 +19,10 @@ Which indices of the implicit array are given in \code{x}
   \item{n}{
 Dimensions of implicit array.
 }
+\item{careful}{
+logical indicating whether to check vailidty of other arguments or work
+quickly (mainly for recursion)
+  }
 }
 \details{
 This function allows for complex repeating patterns.  Consider an array with dimensions \code{n}; then for each value of the dimensions in \code{which} (contained in \code{x}), this function returns the pattern of values in \code{which} for each entry in the larger array.

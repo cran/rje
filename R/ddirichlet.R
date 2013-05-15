@@ -3,7 +3,7 @@ function(x, alpha, log = FALSE, tol=1e-10) {
   k = length(alpha)
   if (is.matrix(x)) n = dim(x)[1]
   else if(is.numeric(x)) {
-    x = matrix(x, nrow = 1)
+    dim(x) = c(1,length(x))
     n = 1
   }
   else stop("Vales must be numeric")

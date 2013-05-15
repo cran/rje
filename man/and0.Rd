@@ -1,0 +1,49 @@
+\name{and0}
+\alias{and0}
+\alias{or0}
+\title{
+Fast pairwise logical operators
+}
+\description{
+Fast but loose implementations of AND and OR logical operators.
+}
+\usage{
+and0(x, y)
+or0(x,y)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{x,y}{
+A logical or numeric vector.
+}
+}
+\details{
+Returns pairwise application of logical operators AND and OR.  Vectors are recycled as usual.
+}
+\value{
+A logical vector of length \code{max(length(x), length(y))} containing 
+}
+\author{
+Robin Evans
+}
+\note{
+These functions should only be used with well understood vectors, and may not deal with unusual cases correctly.
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\examples{
+and0(c(0,1,0),c(1,1,0))
+
+\dontrun{
+set.seed(1234)
+x = rbinom(5000, 1, 0.5)
+y = rbinom(5000, 1, 0.5)
+
+system.time(for (i in 1:5000) and0(x,y))
+system.time(for (i in 1:5000) x & y)
+}
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{logic}
