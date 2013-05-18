@@ -4,4 +4,6 @@
 
 * added fast AND and OR comparisons and0() and or0()
 
+* added fsapply() for slightly faster but dangerous version of sapply().
+	
 * sped up patternRepeat()

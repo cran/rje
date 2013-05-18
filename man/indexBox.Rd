@@ -22,6 +22,8 @@ integer vector of array dimensions.
 }
 \details{
 Given a particular cell in an array, which are the entries within (for example) 1 unit in any direction?  This function gives the (relative) value of such indices.  See examples.
+
+Indices may be repeated if the range exceeds the size of the array in any dimension.
 }
 \value{
 An integer vector giving relative positions of the indices.

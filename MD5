@@ -1,5 +1,5 @@
-3d4e8f46f14e43bf22dcc0501a03aadb *ChangeLog
-28d31f17226d472c25d275cbe2275eee *DESCRIPTION
+62e110e87a0620e2f544a0e1477b4367 *ChangeLog
+9a76fc4f33444cc338d3fb946d6031f3 *DESCRIPTION
 80338c75d77ed0f699fb61260e42a61f *NAMESPACE
 5790eab6f2c47b834f662e3283112598 *R/and0.R
 17775510566cccd3f82332f728b505c5 *R/arrayInd.R
@@ -8,6 +8,7 @@
 26e93c0510e191e6f01faf34b114eccd *R/condition.table2.R
 a78f75b1f1ad1650904f10769d95955b *R/ddirichlet.R
 5a334cbfb641fbe7d38901b978be558f *R/expit.R
+98d179ce3e8dd69003a875cc7081bd8e *R/fsapply.R
 3cde4f2282d40cc122cf950c2112cd0a *R/greaterThan.R
 68282d30c94f216b18be2a44ae524c94 *R/indexBox.R
 791141750eba5269ad64844978107c9c *R/intervention.table.R
@@ -37,8 +38,9 @@ a1c7b5cdd51eb55f8cdd4cef18bff555 *man/and0.Rd
 f9bfb68a7c87b4875f9ef9f38a414b8f *man/combinations.Rd
 8c2779e5e1ba5d465be7032355e22125 *man/condition.table.Rd
 ecfebb2f3dd0ca262ab66076f254c70f *man/expit.Rd
+e975c044db83774ee2c57605a139f7bb *man/fsapply.Rd
 528344f5c397a09f80104683751a89f3 *man/greaterThan.Rd
-28355d1a04277df5547d568d3cf496e0 *man/indexBox.Rd
+5fb1387c57b312b27a2c39d7ea15af5e *man/indexBox.Rd
 0ded1fe591c2a3ce2f312be9a865a8cb *man/intervention.table.Rd
 f4fc154b38999c19f9e50434abcf4043 *man/is.subset.Rd
 3e306431cd70bfd99c8acdae0bc284ff *man/is.wholenumber.Rd
@@ -47,7 +49,7 @@ f4fc154b38999c19f9e50434abcf4043 *man/is.subset.Rd
 19fea959276bd7f911166108cef042c5 *man/powerSet.Rd
 d048b87dada8f03c4017dd50410db841 *man/printPercentage.Rd
 5be8d0287cc0ed7d4d939c6e9604a4dd *man/quickSort.Rd
-fda3d84f8d8fc59de94667866e2da81a *man/rje-package.Rd
+6fb57770513e5d6b8b1b7c5fae7382fd *man/rje-package.Rd
 3443c2bde38093486ef54285201509c8 *man/setmatch.Rd
 5c9aee4d14226ab21e5358044767dd3b *man/subsetMatrix.Rd
 cd8cc931c29a0bebae063dac0d7b0018 *man/subsetOrder.Rd
