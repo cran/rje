@@ -28,7 +28,7 @@ A vector of results of applying \code{FUN} to \code{x}.
 Robin Evans
 }
 
-\section{Warning }{Very loose version of \code{sapply} which should really only by used if you're confident of the results of \code{FUN} being applied to each entry in \code{x}.}
+\section{Warning }{Very loose version of \code{sapply} which should really only by used if you're confident about how \code{FUN} is applied to each entry in \code{x}.}
 
 \examples{
 x = list(1:1000)

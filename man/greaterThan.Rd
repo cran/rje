@@ -4,7 +4,7 @@
 Comparing numerical values
 }
 \description{
-Just a wrapper for '<' for use with quicksort.
+Just a wrapper for comparing numerical values, for use with quicksort.
 }
 \usage{
 greaterThan(x, y)

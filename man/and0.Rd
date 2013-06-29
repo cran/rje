@@ -21,7 +21,7 @@ A logical or numeric vector.
 Returns pairwise application of logical operators AND and OR.  Vectors are recycled as usual.
 }
 \value{
-A logical vector of length \code{max(length(x), length(y))} containing 
+A logical vector of length \code{max(length(x), length(y))} with entries \code{x[1] & x[2]} etc.; each entry of \code{x} or \code{y} is \code{TRUE} if it is non-zero.  
 }
 \author{
 Robin Evans
@@ -33,13 +33,14 @@ These functions should only be used with well understood vectors, and may not de
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-and0(c(0,1,0),c(1,1,0))
+and0(c(0,1,0), c(1,1,0))
 
 \dontrun{
 set.seed(1234)
 x = rbinom(5000, 1, 0.5)
 y = rbinom(5000, 1, 0.5)
 
+# 3 to 4 times improvement over `&`
 system.time(for (i in 1:5000) and0(x,y))
 system.time(for (i in 1:5000) x & y)
 }

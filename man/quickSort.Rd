@@ -46,8 +46,8 @@ Robin Evans
 
 \section{Warning}{Output may not be consistent for certain partial
   orderings (using random pivot), see example below.  All results will
-  be consistent with a total ordering consistent with the true partial
-  ordering.
+  be consistent with a total ordering which is itselft consistent with 
+  the true partial ordering.
   
   \code{f} is not checked to see that it returns a legitimate partial
   order, so results may be meaningless if it is not. 

@@ -1,9 +1,7 @@
-2013-05-15  Version 1.4
+2013-06-29  Version 1.6
 
-* added function arrayInd() and indexBox()
+* added functions armijo() and coarseLine()
 
-* added fast AND and OR comparisons and0() and or0()
+* added function cubeHelix()
 
-* added fsapply() for slightly faster but dangerous version of sapply().
-	
-* sped up patternRepeat()
+* restored compatibility with R >=2.0.0.

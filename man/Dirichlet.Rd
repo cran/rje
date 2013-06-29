@@ -34,7 +34,7 @@ The \emph{k}-dimensional Dirichlet distribution has density
 assuming that \eqn{x_i > 0}{x_i > 0} and \eqn{\sum_i x_i = 1}{x_1 + ... + x_k = 1}, and zero otherwise.
 
 If the sum of row entries in \code{x} differs from 1 by more than \code{tol}, %
-or any entry takes a value less than -\code{tol}, the density is assumed to be %
+or any entry takes a value less than \code{-tol}, the density is assumed to be %
 zero.
 }
 \value{

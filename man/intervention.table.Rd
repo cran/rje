@@ -32,14 +32,14 @@ The dimensions to be conditioned upon.
 A numerical array of the same dimension as \eqn{x}.
 }
 \references{
-Pearl, \emph{Causality}, 2nd Edition. CUP, 2009.
+Pearl, J., \emph{Causality}, 2nd Edition. Cambridge University Press, 2009.
 }
 \author{
 Robin Evans
 }
 
 \seealso{
-\code{\link{condition.table}}
+\code{\link{condition.table}}, 
 \code{\link[base]{margin.table}}
 }
 \examples{

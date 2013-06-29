@@ -4,7 +4,7 @@
 Faster calculation of array indices from vector position.
 }
 \description{
-Calculates array indices based on linear position in an array.
+Calculates array indices based on their vector position in an array.
 }
 \usage{
 arrayInd(ind, .dim, .dimnames = NULL, useNames = FALSE)
@@ -38,7 +38,7 @@ Robin Evans
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link[base]{arrayInd}}.
+The base version, documented as \code{\link[base]{which}}.
 }
 \examples{
 arr = array(1:36, dim=c(2,3,2,3))

@@ -5,7 +5,7 @@
 Find conditional probability table
 }
 \description{
-Given a numeric array, calculates margins of some dimensions conditional on particular values of others.
+Given a numeric array (of probabilities), calculates margins of some dimensions conditional on particular values of others.
 }
 \usage{
 condition.table(x, variables, condition = NULL, condition.value = NULL)
@@ -35,7 +35,7 @@ each value of \code{condition}.
 
 \code{condition.table2} is just a wrapper which returns the conditional
 distribution as an array of the same dimensions and ordering as the
-original \code{x}.
+original \code{x}.  Values are repeated as necessary.
 }
 \value{
 \code{condition.table} returns an array whose first \code{length(variables)} corresponds to the dimensions in \code{variables}, and the remainder (if any) to dimensions in \code{condition} with a corresponding entry in \code{condition.value} of length > 1.
@@ -48,7 +48,7 @@ Mathias Drton, Robin Evans
 }
 
 \seealso{
-\code{\link{margin.table}}
+\code{\link[base]{margin.table}}, \code{\link{intervention.table}}
 }
 \examples{
 x = array(1:16, rep(2,4))
