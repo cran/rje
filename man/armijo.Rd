@@ -9,7 +9,7 @@ Allows use of an Armijo rule or coarse line search as part of minimisation (or m
 }
 \usage{
 armijo(fun, x, dx, beta = 3, sigma = 0.5, grad, 
-                 maximise = FALSE, searchup = TRUE, ...)
+                 maximise = FALSE, searchup = TRUE, adj.start = 1, ...)
 coarseLine(fun, x, dx, beta = 3, maximise = FALSE, ...)
 }
 \arguments{
@@ -36,6 +36,9 @@ logical: if set to \code{TRUE} search is for a maximum rather than a minimum.
   }
 \item{searchup}{
 logical: if set to \code{TRUE} method will try to find largest move satisfying Armijo criterion, rather than just accepting the first it sees
+  }
+\item{adj.start}{
+numeric value giving initial adjustment for step size.
   }
   \item{\dots}{
 other arguments to be passed to \code{fun}

@@ -10,6 +10,7 @@ is.subset = function(x, y){
 
 printPercentage = function (i, n, dp = 0, first = 1, last = n, prev = i - 1)
 {
+    out = ""
     disp = round(100 * i/n, dp)
     if (prev >= first)
         prev.disp = round(100 * prev/n, dp)
@@ -17,13 +18,32 @@ printPercentage = function (i, n, dp = 0, first = 1, last = n, prev = i - 1)
     if (disp > prev.disp) {
         nc = nchar(prev.disp)
         if (i != first) {
-            for (j in 1:(nc + 1)) cat("\b", sep = "")
+          out = paste(out, paste(rep("\b",nc+1), collapse=""), sep="")
         }
-        cat(disp, sep = "")
-        cat("%", sep = "")
+        out = paste(out, disp, "%", sep="")
     }
-    if (i == last) cat("\n")
-    
+    if (i == last) out = paste(out, "\n", sep="")
+    cat(out)   
+    return(NULL)
+}
+
+printCount = function (i, first = 1, prev = i - 1, last = NULL)
+{
+    out = ""
+    disp = round(i)
+    if (prev >= first) 
+        prev.disp = round(prev)
+    else prev.disp = ""
+    if (disp > prev.disp) {
+        nc = nchar(prev.disp)
+        if (i != first) {
+          out = paste(out, paste(rep("\b",nc+1), collapse=""), sep="")
+        }
+        out = c(out, disp)
+        out = paste(out, disp, sep="")
+    }
+    if (!is.null(last) && i == last) out = paste(out, "\n", sep="")
+    cat(out)
     return(NULL)
 }
 
@@ -354,11 +374,11 @@ last = function(x) x[length(x)]
 
 fsapply = function(x, FUN) unlist(lapply(x, FUN))
 
-armijo = function(fun, x, dx, beta = 3, sigma = 0.5, grad, maximise = FALSE, searchup = TRUE, ...) {
+armijo = function(fun, x, dx, beta = 3, sigma = 0.5, grad, maximise = FALSE, searchup = TRUE, adj.start = 1, ...) {
   
   sign = ifelse(maximise, -1, 1)
   if (beta <= 1) stop("adjustment factor beta must be larger than 1")
-  adj = 1
+  adj = adj.start
   tol = .Machine$double.eps
   cur = sign*fun(x, ...)
   nok = TRUE
@@ -378,7 +398,7 @@ armijo = function(fun, x, dx, beta = 3, sigma = 0.5, grad, maximise = FALSE, sea
   # search to find point satisfying Armijo rule
   while (nok) {
     try = sign*fun(x + dx*adj, ...)
-    if ((cur - try) > adj*s) {
+    if (!is.na(try) && (cur - try) > adj*s) {
       nok = FALSE 
     }
     else {
@@ -386,9 +406,10 @@ armijo = function(fun, x, dx, beta = 3, sigma = 0.5, grad, maximise = FALSE, sea
       searchup = FALSE
     }
 
-    if(neg && (cur - try) > -adj*s) neg = FALSE
+    if(neg && !is.na(try) && (cur - try) > -adj*s) neg = FALSE
     
-    # if adjustment gets too small, return with suggestion of either convergence or wrong direction
+    # if adjustment gets too small, return with suggestion of either
+    # convergence or wrong direction
     if (adj*moddx < tol) return(list(x=x, adj=adj, move = dx*adj, best=sign*cur, code = 2*neg))
   }
   

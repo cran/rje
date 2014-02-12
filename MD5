@@ -1,10 +1,10 @@
-547070ee66a4a97e767c24a50b8dac7f *ChangeLog
-714cb6ae945cb880422a530bb883c3dc *DESCRIPTION
+69982901712e1e884f90cb7e38e05c60 *ChangeLog
+41186856ad5f3203e6ecbd66d4a7a6f1 *DESCRIPTION
 80338c75d77ed0f699fb61260e42a61f *NAMESPACE
-968e15b4f728a69f75ccf61b47f94448 *R/rje.R
+68e743a3dc5498220301bd1e1ed78d09 *R/rje.R
 32e75d40ece9ff0aff5237c51d76d1df *man/Dirichlet.Rd
 9c1368f6f06bcc10a11efe17a6dbf58e *man/and0.Rd
-a7c0b6c747c7cfd7ae347be2b6a36911 *man/armijo.Rd
+c7d813fc9ec27ab20469f9d155787381 *man/armijo.Rd
 94cd8ff5f58e1a4c532cd6e23f05a09f *man/arrayInd.Rd
 f9bfb68a7c87b4875f9ef9f38a414b8f *man/combinations.Rd
 2477665aeb72aec29484ee299cb6ca24 *man/condition.table.Rd
@@ -19,9 +19,9 @@ f4fc154b38999c19f9e50434abcf4043 *man/is.subset.Rd
 9ac6d6472491221c49110058244dc757 *man/last.Rd
 8b14914c540e4c32774910c74ee98178 *man/patternRepeat.Rd
 19fea959276bd7f911166108cef042c5 *man/powerSet.Rd
-d048b87dada8f03c4017dd50410db841 *man/printPercentage.Rd
+a72653734cdc341393f778f064740872 *man/printPercentage.Rd
 3a249fed64deaa5b799b086d3659ddef *man/quickSort.Rd
-e36b529ec9cbdf548df0bd57227758b6 *man/rje-package.Rd
+59b508c10f5c70fa4525e0f8d11ef82e *man/rje-package.Rd
 3443c2bde38093486ef54285201509c8 *man/setmatch.Rd
 5c9aee4d14226ab21e5358044767dd3b *man/subsetMatrix.Rd
 cd8cc931c29a0bebae063dac0d7b0018 *man/subsetOrder.Rd
