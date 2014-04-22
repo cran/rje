@@ -1,8 +1,10 @@
-2014-02-12  Version 1.7
+2014-04-22  Version 1.9
 
-* added function printCount()
+* sped up patternRepeat()
 
-* improved efficiency of printPercentage()
+* added functions marginTable() and propTable() for faster versions
+	of base functions margin.table() and prop.table()
 
-* fixed bug in armijo()
+* renamed condition.table() to conditionTable() etc.
 
+* added assignment function versions of subtable()

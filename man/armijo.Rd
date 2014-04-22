@@ -38,7 +38,7 @@ logical: if set to \code{TRUE} search is for a maximum rather than a minimum.
 logical: if set to \code{TRUE} method will try to find largest move satisfying Armijo criterion, rather than just accepting the first it sees
   }
 \item{adj.start}{
-numeric value giving initial adjustment for step size.
+an initial adjustment factor for the step size.
   }
   \item{\dots}{
 other arguments to be passed to \code{fun}

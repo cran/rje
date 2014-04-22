@@ -7,14 +7,15 @@ Miscellaneous useful functions
 }
 \description{
 A series of useful functions, some available in different
-  forms in other packages, but which have been extended or modified in some way considered useful to the author.
+forms in other packages, but which have been extended, sped up, or
+otherwise modified in some way considered useful to the author.
 }
 \details{
 \tabular{ll}{
 Package: \tab rje\cr
 Type: \tab Package\cr
-Version: \tab 1.7\cr
-Date: \tab 2014-02-12\cr
+Version: \tab 1.9\cr
+Date: \tab 2014-04-22\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
