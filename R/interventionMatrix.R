@@ -1,3 +1,5 @@
+#' @describeIn interventionTable Interventions in matrix of distributions
+#' @export interventionMatrix
 interventionMatrix <-
 function (x, variables, condition, dim = NULL, incols = FALSE) 
 {
@@ -7,9 +9,9 @@ function (x, variables, condition, dim = NULL, incols = FALSE)
     if (is.null(dim)) 
         dim = rep(2, log2(dim(x)[d]))
     tmp = conditionMatrix(x, variables, condition, dim = dim, 
-        incols = incols)
+        incols = incols, undef=.5)
     vars = sort(c(variables, condition))
-    patt = patternRepeat(seq_len(ncol(tmp)), vars, dim)
+    patt = patternRepeat0(vars, dim)
     if (incols) 
         tmp = tmp[patt, ]
     else tmp = tmp[, patt]

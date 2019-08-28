@@ -1,6 +1,8 @@
+#' @describeIn conditionTable Conditioning in matrix of distributions
+#' @export conditionMatrix
 conditionMatrix <-
 function (x, variables, condition = NULL, condition.value = NULL, 
-    dim = NULL, incols = FALSE) 
+    dim = NULL, incols = FALSE, undef = NaN) 
 {
     d = 2 - incols
     if (is.null(dim)) 
@@ -20,21 +22,22 @@ function (x, variables, condition = NULL, condition.value = NULL,
         rest = seq_along(dim)[-condition]
         wh = sum((c(condition.value, 1) - 1) * c(1, cumprod(dim[condition]))) + 
             1
-        patt = patternRepeat(seq_len(prod(dim[condition])), condition, 
-            dim)
+        patt = patternRepeat0(condition, dim)
         x = x[, patt == wh]
         dim[condition] = 1
     }
-    mar = sort(union(variables, condition))
+    mar = sort.int(union(variables, condition))
     mtch = match(condition, mar)
-    jt = marginMatrix(x, margin = mar, dim = dim, incols = incols)
-    cond = marginMatrix(jt, margin = mtch, dim = dim[mar], incols = incols)
-    patt = patternRepeat(seq_len(ncol(cond)), mtch, dim[mar])
+    joint = marginMatrix(x, margin = mar, dim = dim, incols = incols)
+    cond = marginMatrix(joint, margin = mtch, dim = dim[mar], 
+        incols = incols)
+    patt = patternRepeat0(mtch, dim[mar])
     if (incols) {
-        out = jt/c(cond[patt, ])
+        out = joint/c(cond[patt, ])
     }
     else {
-        out = jt/c(cond[, patt])
+        out = joint/c(cond[, patt])
     }
+    if (!is.nan(undef[1])) out[is.nan(out)] = undef[1]
     out
 }

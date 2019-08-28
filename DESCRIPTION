@@ -1,17 +1,21 @@
 Package: rje
 Type: Package
-Title: Miscellaneous useful functions
-Version: 1.9
-Date: 2014-04-22
-Author: Robin Evans <evans@stats.ox.ac.uk>
-Maintainer: Robin Evans <evans@stats.ox.ac.uk>
-Description: A series of useful functions, some available in different
-  forms in other packages, but which have been extended, sped up, or
-  otherwise modified in some way considered useful to the author.
-Depends: R (>= 2.0.0)
+Title: Miscellaneous Useful Functions for Statistics
+Version: 1.10.10
+Authors@R: c(person("Robin", "Evans", email="evans@stats.ox.ac.uk",
+    role=c("aut", "cre")), person("Mathias", "Drton", role=c("ctb")))
+Description: A series of functions in some way considered useful to the author.  These include functions for subsetting tables and generating indices for arrays, conditioning and intervening in probability distributions, generating combinations and more...
+Depends: R (>= 2.0.0),
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2014-08-06 14:00:12 UTC; evans
+Imports: knitr
+Suggests: testthat, rmarkdown
+VignetteBuilder: knitr
+Packaged: 2019-08-26 11:15:48 UTC; evans
+Author: Robin Evans [aut, cre],
+  Mathias Drton [ctb]
+Maintainer: Robin Evans <evans@stats.ox.ac.uk>
+RoxygenNote: 6.1.1
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2014-08-06 19:18:00
+Date/Publication: 2019-08-28 04:30:02 UTC
