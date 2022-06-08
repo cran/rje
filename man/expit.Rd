@@ -6,6 +6,8 @@
 \title{Expit and Logit.}
 \usage{
 expit(x)
+
+logit(x)
 }
 \arguments{
 \item{x}{vector of real numbers; for \code{logit} to return a sensible value
@@ -24,6 +26,11 @@ Functions to take the expit and logit of numerical vectors.
 that \code{logit(0) = -Inf} and \code{logit(1) = Inf}, and correspondingly
 for \code{expit}.
 }
+\section{Functions}{
+\itemize{
+\item \code{logit}: logit function
+}}
+
 \section{Warning }{
  Choosing very large (positive or negative) values to
 apply to \code{expit} may result in inaccurate inversion (see example
@@ -38,7 +45,6 @@ logit(y)
 
 # Beware large values!
 logit(expit(100))
-
 }
 \author{
 Robin Evans
