@@ -1,5 +1,5 @@
 226316f24d8adf9bb2e0fe1f1afef8f6 *ChangeLog
-6cf6477fcf4d16f0926c7fff13d960af *DESCRIPTION
+2a12f10edec44d95aa0b9f1ccc5a6da5 *DESCRIPTION
 747818ee8f7cbecadd7a24cbd329b6d2 *NAMESPACE
 c0d68459d1986e995afa4c833c45b606 *R/Dirichlet.R
 931555e5197a904a7097d5192bb68dbf *R/Rcpp.R
@@ -36,12 +36,12 @@ d9043d860b1f241ef44be4c3d1724e0d *R/schur.R
 88701b7c12b942fdbf21c740d97d7afa *R/setmatch.R
 e1d1848cfd3386368efeeeb5cc1fe38b *R/subsetMatrix.R
 ce4e9beded9683065c2ee01124d7757d *R/subtable.R
-7bbc3e317a0a293ba00f28747324da7f *R/zzz.R
+84f768ba5c6153e4377a4cd1a4eeb748 *R/zzz.R
 ca2325a7c0be54a985e95f0727ef9f98 *README.md
 d8aebc208764bfd276b3c9b8960dffa1 *build/vignette.rds
 d8a572a02f9689733f4e98867d2d226c *inst/doc/conditional_distributions.R
 267284e9067340b90dc96e98f0c26bd4 *inst/doc/conditional_distributions.Rmd
-26b78afbba7915981baddc02a96aec42 *inst/doc/conditional_distributions.html
+6cf3b1834360a1e1a41c3e0fc05b8e9c *inst/doc/conditional_distributions.html
 22ce730fbd50a192c9e41b2823dbcc8b *man/Dirichlet.Rd
 25e098b4a97dae8eeb917cdd58425936 *man/and0.Rd
 2050874432e9cc9bcb56ce9d1f6a2995 *man/armijo.Rd
